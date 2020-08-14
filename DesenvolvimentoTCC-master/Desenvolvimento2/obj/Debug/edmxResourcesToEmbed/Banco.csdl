@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Desenvolvimento_TCCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="aluno_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ra" Type="Int32" Nullable="false" />
+    <Property Name="nome_completo" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="end_cidade" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="end_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_rua" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="end_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_bairro" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_logradouro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_fixo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_emergencial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="curso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_de_ingresso" Type="DateTime" Precision="3" />
+    <Property Name="data_nascimento" Type="DateTime" Precision="3" />
+    <Property Name="nome_pai" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="nome_mae" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="rg" Type="Int32" />
+    <Property Name="cpf" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nacionalidade_id" Type="Int32" />
+    <Property Name="sexo_id" Type="Int32" />
+    <Property Name="status_id" Type="Int32" />
+    <Property Name="tipo_id" Type="Int32" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="pais_tb" Relationship="Self.FK_aluno_tb_x_pais_tb" FromRole="aluno_tb" ToRole="pais_tb" />
+    <NavigationProperty Name="sexo_tb" Relationship="Self.FK_aluno_tb_x_sexo_tb" FromRole="aluno_tb" ToRole="sexo_tb" />
+    <NavigationProperty Name="status_tb" Relationship="Self.FK_aluno_tb_x_status_tb" FromRole="aluno_tb" ToRole="status_tb" />
+    <NavigationProperty Name="tipo_tb" Relationship="Self.FK_aluno_tb_x_tipo_tb" FromRole="aluno_tb" ToRole="tipo_tb" />
+  </EntityType>
+  <EntityType Name="curso_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cod_curso" Type="Int32" />
+    <Property Name="nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="funcionario_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_completo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="rg" Type="Int32" />
+    <Property Name="cpf" Type="Int32" Nullable="false" />
+    <Property Name="telefone_fixo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_emergencial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_cep" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="end_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_logradouro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_rua" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numresidencia" Type="Int32" />
+    <Property Name="data_cadastro" Type="DateTime" Precision="3" />
+    <Property Name="data_nascimento" Type="DateTime" Precision="3" />
+    <Property Name="nacionalidade_id" Type="Int32" />
+    <Property Name="sexo_id" Type="Int32" />
+    <Property Name="status_id" Type="Int32" />
+    <Property Name="tipo_id" Type="Int32" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="pais_tb" Relationship="Self.FK_funcionario_tb_x_pais_tb" FromRole="funcionario_tb" ToRole="pais_tb" />
+    <NavigationProperty Name="sexo_tb" Relationship="Self.FK_funcionario_tb_x_sexo_tb" FromRole="funcionario_tb" ToRole="sexo_tb" />
+    <NavigationProperty Name="sexo_tb1" Relationship="Self.FK_funcionario_tb_x_status_tb" FromRole="funcionario_tb" ToRole="sexo_tb" />
+    <NavigationProperty Name="tipo_tb" Relationship="Self.FK_funcionario_tb_x_tipo_tb" FromRole="funcionario_tb" ToRole="tipo_tb" />
+  </EntityType>
+  <EntityType Name="pais_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="aluno_tb" Relationship="Self.FK_aluno_tb_x_pais_tb" FromRole="pais_tb" ToRole="aluno_tb" />
+    <NavigationProperty Name="funcionario_tb" Relationship="Self.FK_funcionario_tb_x_pais_tb" FromRole="pais_tb" ToRole="funcionario_tb" />
+    <NavigationProperty Name="professor_tb" Relationship="Self.FK_professor_tb_x_pais_tb" FromRole="pais_tb" ToRole="professor_tb" />
+  </EntityType>
+  <EntityType Name="perfil_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario_id" Type="Int32" />
+    <Property Name="tipo_id" Type="Int32" />
+    <Property Name="tela_id" Type="Int32" />
+    <Property Name="consultar" Type="Int32" />
+    <Property Name="atualizar" Type="Int32" />
+    <Property Name="deletar" Type="Int32" />
+    <Property Name="imprimir" Type="Int32" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tela_tb" Relationship="Self.FK_perfil_tb_x_tela_tb" FromRole="perfil_tb" ToRole="tela_tb" />
+  </EntityType>
+  <EntityType Name="professor_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_completo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="rg" Type="Int32" />
+    <Property Name="cpf" Type="Int32" Nullable="false" />
+    <Property Name="telefone_fixo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone_emergencial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_cep" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="end_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_logradouro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_rua" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numresidencia" Type="Int32" />
+    <Property Name="formacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codigo_acesso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="senha_acesso" Type="Int32" />
+    <Property Name="data_cadastro" Type="DateTime" Precision="3" />
+    <Property Name="status_id" Type="Int32" />
+    <Property Name="nacionalidade_id" Type="Int32" />
+    <Property Name="sexo_id" Type="Int32" />
+    <Property Name="tipo_id" Type="Int32" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="pais_tb" Relationship="Self.FK_professor_tb_x_pais_tb" FromRole="professor_tb" ToRole="pais_tb" />
+    <NavigationProperty Name="sexo_tb" Relationship="Self.FK_professor_tb_x_sexo_tb" FromRole="professor_tb" ToRole="sexo_tb" />
+    <NavigationProperty Name="status_tb" Relationship="Self.FK_professor_tb_x_status_tb" FromRole="professor_tb" ToRole="status_tb" />
+    <NavigationProperty Name="tipo_tb" Relationship="Self.FK_professor_tb_x_tipo_tb" FromRole="professor_tb" ToRole="tipo_tb" />
+  </EntityType>
+  <EntityType Name="sexo_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="aluno_tb" Relationship="Self.FK_aluno_tb_x_sexo_tb" FromRole="sexo_tb" ToRole="aluno_tb" />
+    <NavigationProperty Name="funcionario_tb" Relationship="Self.FK_funcionario_tb_x_sexo_tb" FromRole="sexo_tb" ToRole="funcionario_tb" />
+    <NavigationProperty Name="funcionario_tb1" Relationship="Self.FK_funcionario_tb_x_status_tb" FromRole="sexo_tb" ToRole="funcionario_tb" />
+    <NavigationProperty Name="professor_tb" Relationship="Self.FK_professor_tb_x_sexo_tb" FromRole="sexo_tb" ToRole="professor_tb" />
+  </EntityType>
+  <EntityType Name="status_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="aluno_tb" Relationship="Self.FK_aluno_tb_x_status_tb" FromRole="status_tb" ToRole="aluno_tb" />
+    <NavigationProperty Name="professor_tb" Relationship="Self.FK_professor_tb_x_status_tb" FromRole="status_tb" ToRole="professor_tb" />
+  </EntityType>
+  <EntityType Name="tela_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descricao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="perfil_tb" Relationship="Self.FK_perfil_tb_x_tela_tb" FromRole="tela_tb" ToRole="perfil_tb" />
+  </EntityType>
+  <EntityType Name="tipo_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="aluno_tb" Relationship="Self.FK_aluno_tb_x_tipo_tb" FromRole="tipo_tb" ToRole="aluno_tb" />
+    <NavigationProperty Name="funcionario_tb" Relationship="Self.FK_funcionario_tb_x_tipo_tb" FromRole="tipo_tb" ToRole="funcionario_tb" />
+    <NavigationProperty Name="professor_tb" Relationship="Self.FK_professor_tb_x_tipo_tb" FromRole="tipo_tb" ToRole="professor_tb" />
+  </EntityType>
+  <EntityType Name="titulo_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="dt_inclusao" Type="DateTime" Precision="3" />
+    <Property Name="dt_alteracao" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_aluno_tb_x_pais_tb">
+    <End Role="pais_tb" Type="Self.pais_tb" Multiplicity="0..1" />
+    <End Role="aluno_tb" Type="Self.aluno_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aluno_tb">
+        <PropertyRef Name="nacionalidade_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aluno_tb_x_sexo_tb">
+    <End Role="sexo_tb" Type="Self.sexo_tb" Multiplicity="0..1" />
+    <End Role="aluno_tb" Type="Self.aluno_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aluno_tb">
+        <PropertyRef Name="sexo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aluno_tb_x_status_tb">
+    <End Role="status_tb" Type="Self.status_tb" Multiplicity="0..1" />
+    <End Role="aluno_tb" Type="Self.aluno_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aluno_tb">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aluno_tb_x_tipo_tb">
+    <End Role="tipo_tb" Type="Self.tipo_tb" Multiplicity="0..1" />
+    <End Role="aluno_tb" Type="Self.aluno_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aluno_tb">
+        <PropertyRef Name="tipo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_funcionario_tb_x_pais_tb">
+    <End Role="pais_tb" Type="Self.pais_tb" Multiplicity="0..1" />
+    <End Role="funcionario_tb" Type="Self.funcionario_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funcionario_tb">
+        <PropertyRef Name="nacionalidade_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_funcionario_tb_x_sexo_tb">
+    <End Role="sexo_tb" Type="Self.sexo_tb" Multiplicity="0..1" />
+    <End Role="funcionario_tb" Type="Self.funcionario_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funcionario_tb">
+        <PropertyRef Name="sexo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_funcionario_tb_x_status_tb">
+    <End Role="sexo_tb" Type="Self.sexo_tb" Multiplicity="0..1" />
+    <End Role="funcionario_tb" Type="Self.funcionario_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funcionario_tb">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_funcionario_tb_x_tipo_tb">
+    <End Role="tipo_tb" Type="Self.tipo_tb" Multiplicity="0..1" />
+    <End Role="funcionario_tb" Type="Self.funcionario_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funcionario_tb">
+        <PropertyRef Name="tipo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_professor_tb_x_pais_tb">
+    <End Role="pais_tb" Type="Self.pais_tb" Multiplicity="0..1" />
+    <End Role="professor_tb" Type="Self.professor_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="professor_tb">
+        <PropertyRef Name="nacionalidade_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_perfil_tb_x_tela_tb">
+    <End Role="tela_tb" Type="Self.tela_tb" Multiplicity="0..1" />
+    <End Role="perfil_tb" Type="Self.perfil_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tela_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="perfil_tb">
+        <PropertyRef Name="tela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_professor_tb_x_sexo_tb">
+    <End Role="sexo_tb" Type="Self.sexo_tb" Multiplicity="0..1" />
+    <End Role="professor_tb" Type="Self.professor_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="professor_tb">
+        <PropertyRef Name="sexo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_professor_tb_x_status_tb">
+    <End Role="status_tb" Type="Self.status_tb" Multiplicity="0..1" />
+    <End Role="professor_tb" Type="Self.professor_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="professor_tb">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_professor_tb_x_tipo_tb">
+    <End Role="tipo_tb" Type="Self.tipo_tb" Multiplicity="0..1" />
+    <End Role="professor_tb" Type="Self.professor_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_tb">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="professor_tb">
+        <PropertyRef Name="tipo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Desenvolvimento_TCCEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aluno_tb" EntityType="Self.aluno_tb" />
+    <EntitySet Name="curso_tb" EntityType="Self.curso_tb" />
+    <EntitySet Name="funcionario_tb" EntityType="Self.funcionario_tb" />
+    <EntitySet Name="pais_tb" EntityType="Self.pais_tb" />
+    <EntitySet Name="perfil_tb" EntityType="Self.perfil_tb" />
+    <EntitySet Name="professor_tb" EntityType="Self.professor_tb" />
+    <EntitySet Name="sexo_tb" EntityType="Self.sexo_tb" />
+    <EntitySet Name="status_tb" EntityType="Self.status_tb" />
+    <EntitySet Name="tela_tb" EntityType="Self.tela_tb" />
+    <EntitySet Name="tipo_tb" EntityType="Self.tipo_tb" />
+    <EntitySet Name="titulo_tb" EntityType="Self.titulo_tb" />
+    <AssociationSet Name="FK_aluno_tb_x_pais_tb" Association="Self.FK_aluno_tb_x_pais_tb">
+      <End Role="pais_tb" EntitySet="pais_tb" />
+      <End Role="aluno_tb" EntitySet="aluno_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aluno_tb_x_sexo_tb" Association="Self.FK_aluno_tb_x_sexo_tb">
+      <End Role="sexo_tb" EntitySet="sexo_tb" />
+      <End Role="aluno_tb" EntitySet="aluno_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aluno_tb_x_status_tb" Association="Self.FK_aluno_tb_x_status_tb">
+      <End Role="status_tb" EntitySet="status_tb" />
+      <End Role="aluno_tb" EntitySet="aluno_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aluno_tb_x_tipo_tb" Association="Self.FK_aluno_tb_x_tipo_tb">
+      <End Role="tipo_tb" EntitySet="tipo_tb" />
+      <End Role="aluno_tb" EntitySet="aluno_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_funcionario_tb_x_pais_tb" Association="Self.FK_funcionario_tb_x_pais_tb">
+      <End Role="pais_tb" EntitySet="pais_tb" />
+      <End Role="funcionario_tb" EntitySet="funcionario_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_funcionario_tb_x_sexo_tb" Association="Self.FK_funcionario_tb_x_sexo_tb">
+      <End Role="sexo_tb" EntitySet="sexo_tb" />
+      <End Role="funcionario_tb" EntitySet="funcionario_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_funcionario_tb_x_status_tb" Association="Self.FK_funcionario_tb_x_status_tb">
+      <End Role="sexo_tb" EntitySet="sexo_tb" />
+      <End Role="funcionario_tb" EntitySet="funcionario_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_funcionario_tb_x_tipo_tb" Association="Self.FK_funcionario_tb_x_tipo_tb">
+      <End Role="tipo_tb" EntitySet="tipo_tb" />
+      <End Role="funcionario_tb" EntitySet="funcionario_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_professor_tb_x_pais_tb" Association="Self.FK_professor_tb_x_pais_tb">
+      <End Role="pais_tb" EntitySet="pais_tb" />
+      <End Role="professor_tb" EntitySet="professor_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_perfil_tb_x_tela_tb" Association="Self.FK_perfil_tb_x_tela_tb">
+      <End Role="tela_tb" EntitySet="tela_tb" />
+      <End Role="perfil_tb" EntitySet="perfil_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_professor_tb_x_sexo_tb" Association="Self.FK_professor_tb_x_sexo_tb">
+      <End Role="sexo_tb" EntitySet="sexo_tb" />
+      <End Role="professor_tb" EntitySet="professor_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_professor_tb_x_status_tb" Association="Self.FK_professor_tb_x_status_tb">
+      <End Role="status_tb" EntitySet="status_tb" />
+      <End Role="professor_tb" EntitySet="professor_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_professor_tb_x_tipo_tb" Association="Self.FK_professor_tb_x_tipo_tb">
+      <End Role="tipo_tb" EntitySet="tipo_tb" />
+      <End Role="professor_tb" EntitySet="professor_tb" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

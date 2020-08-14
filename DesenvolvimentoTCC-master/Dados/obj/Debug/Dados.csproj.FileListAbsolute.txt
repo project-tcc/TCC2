@@ -1,0 +1,10 @@
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\bin\Debug\Dados.dll
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\bin\Debug\Dados.pdb
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\bin\Debug\Model.dll
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\bin\Debug\System.Data.SQLite.dll
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\bin\Debug\Model.pdb
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\obj\Debug\Dados.csprojAssemblyReference.cache
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\obj\Debug\Dados.csproj.CopyComplete
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\obj\Debug\Dados.dll
+C:\Users\Adeni\Desktop\GitHub\DesenvolvimentoTCC-master\Dados\obj\Debug\Dados.pdb

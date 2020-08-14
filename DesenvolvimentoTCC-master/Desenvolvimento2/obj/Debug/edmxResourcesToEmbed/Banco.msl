@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Desenvolvimento_TCCModelStoreContainer" CdmEntityContainer="Desenvolvimento_TCCEntities2">
+    <EntitySetMapping Name="aluno_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.aluno_tb">
+        <MappingFragment StoreEntitySet="aluno_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ra" ColumnName="ra" />
+          <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
+          <ScalarProperty Name="end_cidade" ColumnName="end_cidade" />
+          <ScalarProperty Name="end_cep" ColumnName="end_cep" />
+          <ScalarProperty Name="end_rua" ColumnName="end_rua" />
+          <ScalarProperty Name="end_complemento" ColumnName="end_complemento" />
+          <ScalarProperty Name="end_bairro" ColumnName="end_bairro" />
+          <ScalarProperty Name="tipo_logradouro" ColumnName="tipo_logradouro" />
+          <ScalarProperty Name="telefone_fixo" ColumnName="telefone_fixo" />
+          <ScalarProperty Name="telefone_celular" ColumnName="telefone_celular" />
+          <ScalarProperty Name="telefone_emergencial" ColumnName="telefone_emergencial" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="data_de_ingresso" ColumnName="data_de_ingresso" />
+          <ScalarProperty Name="data_nascimento" ColumnName="data_nascimento" />
+          <ScalarProperty Name="nome_pai" ColumnName="nome_pai" />
+          <ScalarProperty Name="nome_mae" ColumnName="nome_mae" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nacionalidade_id" ColumnName="nacionalidade_id" />
+          <ScalarProperty Name="sexo_id" ColumnName="sexo_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="curso_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.curso_tb">
+        <MappingFragment StoreEntitySet="curso_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cod_curso" ColumnName="cod_curso" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="funcionario_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.funcionario_tb">
+        <MappingFragment StoreEntitySet="funcionario_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="telefone_fixo" ColumnName="telefone_fixo" />
+          <ScalarProperty Name="telefone_celular" ColumnName="telefone_celular" />
+          <ScalarProperty Name="telefone_emergencial" ColumnName="telefone_emergencial" />
+          <ScalarProperty Name="end_cep" ColumnName="end_cep" />
+          <ScalarProperty Name="end_complemento" ColumnName="end_complemento" />
+          <ScalarProperty Name="end_bairro" ColumnName="end_bairro" />
+          <ScalarProperty Name="end_cidade" ColumnName="end_cidade" />
+          <ScalarProperty Name="tipo_logradouro" ColumnName="tipo_logradouro" />
+          <ScalarProperty Name="end_rua" ColumnName="end_rua" />
+          <ScalarProperty Name="numresidencia" ColumnName="numresidencia" />
+          <ScalarProperty Name="data_cadastro" ColumnName="data_cadastro" />
+          <ScalarProperty Name="data_nascimento" ColumnName="data_nascimento" />
+          <ScalarProperty Name="nacionalidade_id" ColumnName="nacionalidade_id" />
+          <ScalarProperty Name="sexo_id" ColumnName="sexo_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pais_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.pais_tb">
+        <MappingFragment StoreEntitySet="pais_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="perfil_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.perfil_tb">
+        <MappingFragment StoreEntitySet="perfil_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="tela_id" ColumnName="tela_id" />
+          <ScalarProperty Name="consultar" ColumnName="consultar" />
+          <ScalarProperty Name="atualizar" ColumnName="atualizar" />
+          <ScalarProperty Name="deletar" ColumnName="deletar" />
+          <ScalarProperty Name="imprimir" ColumnName="imprimir" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="professor_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.professor_tb">
+        <MappingFragment StoreEntitySet="professor_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="telefone_fixo" ColumnName="telefone_fixo" />
+          <ScalarProperty Name="telefone_celular" ColumnName="telefone_celular" />
+          <ScalarProperty Name="telefone_emergencial" ColumnName="telefone_emergencial" />
+          <ScalarProperty Name="end_cep" ColumnName="end_cep" />
+          <ScalarProperty Name="end_complemento" ColumnName="end_complemento" />
+          <ScalarProperty Name="end_bairro" ColumnName="end_bairro" />
+          <ScalarProperty Name="end_cidade" ColumnName="end_cidade" />
+          <ScalarProperty Name="tipo_logradouro" ColumnName="tipo_logradouro" />
+          <ScalarProperty Name="end_rua" ColumnName="end_rua" />
+          <ScalarProperty Name="numresidencia" ColumnName="numresidencia" />
+          <ScalarProperty Name="formacao" ColumnName="formacao" />
+          <ScalarProperty Name="codigo_acesso" ColumnName="codigo_acesso" />
+          <ScalarProperty Name="senha_acesso" ColumnName="senha_acesso" />
+          <ScalarProperty Name="data_cadastro" ColumnName="data_cadastro" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="nacionalidade_id" ColumnName="nacionalidade_id" />
+          <ScalarProperty Name="sexo_id" ColumnName="sexo_id" />
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sexo_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.sexo_tb">
+        <MappingFragment StoreEntitySet="sexo_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.status_tb">
+        <MappingFragment StoreEntitySet="status_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tela_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.tela_tb">
+        <MappingFragment StoreEntitySet="tela_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.tipo_tb">
+        <MappingFragment StoreEntitySet="tipo_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="titulo_tb">
+      <EntityTypeMapping TypeName="Desenvolvimento_TCCModel.titulo_tb">
+        <MappingFragment StoreEntitySet="titulo_tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_alteracao" ColumnName="dt_alteracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
