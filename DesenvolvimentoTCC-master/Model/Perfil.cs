@@ -8,19 +8,22 @@ namespace Model
 {
     public class Perfil
     {
-        public int id { get; set; }
-        public int usuario_id { get; set; }
-        public int tipo_id { get; set; }
-        public int tela_id { get; set; }
-        public int consultar { get; set; }
-        public int atualizar { get; set; }
-        public int deletar { get; set; }
-        public int imprimir { get; set; }
-        public DateTime dt_inclusao { get; set; }
-        public DateTime data_alteracao { get; set; }
-
-        
+        public int Id { get; set; }
+        public int Usuario_id { get; set; }
+        public int Tipo_id { get; set; }
+        public int Tela_id { get; set; }
+        public int Consultar { get; set; }
+        public int Atualizar { get; set; }
+        public int Deletar { get; set; }
+        public int Imprimir { get; set; }
+        public DateTime Dt_inclusao { get; set; }
+        public DateTime Data_alteracao { get; set; }
 
 
+
+        //public override string ToString()
+        //{
+        //    return this.tipo_id; //irmao aqui ta retornando int e tem que ser string, 
+        //}
     }
 }

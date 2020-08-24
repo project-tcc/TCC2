@@ -8,10 +8,15 @@ namespace Model
 {
     public class Sexo
     {
-        public int id { get; set; }
-        public string nome { get; set; }
-        public DateTime dt_inclusao { get; set; }
-        public DateTime data_alteracao { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public DateTime Dt_inclusao { get; set; }
+        public DateTime Dt_alteracao { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
 
     }
 }

@@ -32,6 +32,12 @@
         .auto-style4 {
             width: 112px;
         }
+        .auto-style5 {
+            width: 147px;
+        }
+        .auto-style6 {
+            width: 99px;
+        }
     </style>
 </head>
 
@@ -70,7 +76,7 @@
         <br />
         <asp:Label ID="lbl_Nacionalidade" runat="server" Text="Nacionalidade"></asp:Label>
         <br />
-        <asp:DropDownList ID="ddlPaises" runat="server" OnSelectedIndexChanged="ddlPaises_SelectedIndexChanged">
+        <asp:DropDownList ID="ddlPaises" runat="server">
         </asp:DropDownList>
         <br />
         <br />
@@ -98,8 +104,6 @@
         
                 <asp:Label ID="lbl_Titulo" runat="server" Text="Título"></asp:Label>
                 <br />
-                <asp:DropDownList ID="ddlTitulo" runat="server">
-        </asp:DropDownList>
 
                 
                  <br />
@@ -113,8 +117,37 @@
                  <asp:TextBox ID="txt_senha_acesso" runat="server" class="form-control"></asp:TextBox>  
        
 
-            <asp:Label ID="lbl_data_Cadastro" runat="server" Text="Data de Cadastro"></asp:Label>
-                 <asp:TextBox ID="txt_data_cadastro" runat="server" class="form-control"></asp:TextBox>    
+            <br />
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style5">
+                    <asp:Label ID="lbl_dt_inclusao" runat="server" Text="Data de Inclusão"></asp:Label>
+                </td>
+                <td class="auto-style6">&nbsp;</td>
+                <td>
+                    <asp:Label ID="lbl_dt_alteracao" runat="server" Text="Data de Alteração"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <asp:TextBox ID="txt_dt_inclusao" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style6">&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="txt_dt_alteracao" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <br />
+       
+
+            <asp:Label ID="lbl_data_Cadastro" runat="server" Text="Data de Admissão"></asp:Label>
+                 <asp:TextBox ID="txt_data_admissao" runat="server" class="form-control"></asp:TextBox>    
        
 
             <br />
@@ -145,7 +178,7 @@
                     </asp:DropDownList>
                 </td>
                 <td>
-                    <asp:DropDownList ID="ddlTipos" runat="server">
+                    <asp:DropDownList ID="ddlTipo" runat="server">
                     </asp:DropDownList>
                 </td>
             </tr>

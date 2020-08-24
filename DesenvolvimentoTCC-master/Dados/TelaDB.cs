@@ -22,19 +22,21 @@ namespace Dados
             try
             {
                 string sql = "INSERT INTO tela_tb " + "(id, nome , descricao, dt_inclusao, dt_alteracao)" +
-                    "values  (@Id, @nome, @descricao @dt_inclusao, @dt_alteracao)";
+                    "values  (@Id, @Nome, @Descricao @Dt_inclusao, @Dt_alteracao)";
 
                 using (var cmd = sqliteConnection.CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue("@id", Tela.id);
-                    cmd.Parameters.AddWithValue("@nome", Tela.nome);
-                    cmd.Parameters.AddWithValue("@descricao", Tela.nome);
-                    cmd.Parameters.AddWithValue("@dt_inclusao", Tela.dt_inclusao);
-                    cmd.Parameters.AddWithValue("@dt_inclusao", Tela.dt_alteracao);
+                    cmd.Parameters.AddWithValue("@Id", Tela.Id);
+                    cmd.Parameters.AddWithValue("@Nome", Tela.Nome);
+                    cmd.Parameters.AddWithValue("@Descricao", Tela.Descricao);
+                    cmd.Parameters.AddWithValue("@Dt_inclusao", Tela.Dt_inclusao);
+                    cmd.Parameters.AddWithValue("@Dt_inclusao", Tela.Dt_alteracao);
 
                     cmd.ExecuteNonQuery();
                 }
+                return true;
+
 
 
             }

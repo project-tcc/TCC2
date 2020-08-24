@@ -15,88 +15,66 @@ namespace Desenvolvimento2
 {
     public partial class CadAluno1 : System.Web.UI.Page
     {
-        // dá para usar na pagina toda sem precisar ficar criando
-        //banco_tccEntities context = new banco_tccEntities();
-
-        AlunoDB context = new AlunoDB();
-        PaisDB contexts = new PaisDB();
-        /// <summary>
-        /// string de conexão
-  
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //if (!IsPostBack)
-            //{
-            //    CarregarPaises();
-            //    CarregarCursos();
-            //    CarregarSexo();
-            //    CarregarStatus();
-            //    CarregarTipo();
-            //}
-            //CarregarTabela();
-            //    //Carrega o Drop Down referente aos paises
-            //    ddlPaises = DropGenerico(ddlPaises, 1);
-            //    ddlCursos = DropGenerico(ddlCursos, 2);
-            //    ddlSexo = DropGenerico(ddlSexo, 3);
-            //    ddlStatus = DropGenerico(ddlStatus, 4);
-            //    ddlTipo = DropGenerico(ddlTipo, 5);
+            if (!IsPostBack)
+            {
+                CarregarPaises();
+                CarregarCursos();
+                CarregarSexo();
+                CarregarStatus();
+                CarregarTipo();
+            }
         }
 
             protected void btn_salvar_Click(object sender, EventArgs e)
             {
-                Aluno aluno = new Aluno()
-                {
-                    ra = int.Parse(txt_RA.Text),
-                    //curso = Convert.ToInt64(ddlCursos.Text),
-                    curso = ddlCursos.Text,
-                    data_de_ingresso = Convert.ToDateTime(txtDataIngressao.Text),
-                    nome_completo = txtNomeCompleto.Text,
-                    rg = Convert.ToInt32(txtRG.Text),
-                    cpf = Convert.ToInt32(txtcpf.Text),
-                    telefone_fixo = txtTelefone.Text,
-                    telefone_celular = txtCelular.Text,
-                    nacionalidade = Convert.ToInt32(ddlPaises.Text),
-                    nome_pai = txt_nome_pai.Text,
-                    nome_mae = txt_nome_mae.Text,
-                    end_cep = txtCEP.Text,
-                    end_complemento = txt_complemento.Text,
-                    end_bairro = txt_bairro.Text,
-                    end_cidade = txt_cidade.Text,
-                    tipo_logradouro = txt_tipo_logradouro.Text,
-                    end_rua = txtEnd.Text,
-                    telefone_emergencial = txt_tel_emergencia.Text,
-                    data_nascimento = Convert.ToDateTime(txtDTNascimento.Text),
-                    email = txtEmail.Text,
-                    sexo_id = Convert.ToInt32(ddlSexo.Text),
-                    status_id = Convert.ToInt32(ddlStatus.Text),
-                    tipo_id = Convert.ToInt32(ddlTipo.Text),
-                    dt_inclusao = Convert.ToDateTime(txt_dt_inclusao.Text),
-                    data_alteracao = Convert.ToDateTime(txt_dt_alteracao.Text),
+            Aluno aluno = new Aluno()
+            {
+                    Ra = txt_RA.Text,
+                    Curso = ddlCursos.Text,
+                    Data_de_ingresso = Convert.ToDateTime(txtDataIngressao.Text),
+                    Nome_completo = txtNomeCompleto.Text,
+                    Rg = txtRG.Text,
+                    Cpf = txtcpf.Text,
+                    Telefone_fixo = txtTelefone.Text,
+                    Telefone_celular = txtCelular.Text,
+                    Nacionalidade = ddlPaises.Text,
+                    Nome_pai = txt_nome_pai.Text,
+                    Nome_mae = txt_nome_mae.Text,
+                    End_cep = txtCEP.Text,
+                    End_complemento = txt_complemento.Text,
+                    End_bairro = txt_bairro.Text,
+                    End_cidade = txt_cidade.Text,
+                    Tipo_logradouro = txt_tipo_logradouro.Text,
+                    End_rua = txtEnd.Text,
+                    Telefone_emergencial = txt_tel_emerg.Text,
+                    Data_nascimento = Convert.ToDateTime(txtDTNascimento.Text),
+                    Email = txtEmail.Text,
+                    Sexo_id = ddlSexo.Text,
+                    Status_id = ddlStatus.Text,
+                    Tipo_id = ddlTipo.Text,
+                    Dt_inclusao = Convert.ToDateTime(txt_dt_inclusao.Text),
+                    Data_alteracao = Convert.ToDateTime(txt_dt_alteracao.Text),
                 };
 
                 AlunoDB alunoDB = new AlunoDB();
                 bool status = alunoDB.Salvar(aluno);
 
-
-                if (status)
+            if (status)
                 {
-                    lblMSG.Text = "Registro Inserido!";
-                    LimparComponentes();
-
-                }
+                  Response.Write("<script>alert('Registro Inserido com Sucesso!');</script>");
+                  LimparComponentes();
+            }
                 else
                 {
-                    lblMSG.Text = "Erro ao inserir registro";
-
-                }
+                Response.Write("<script>alert('Erro ao tentar inserir!');</script>");
+            }
             }
 
-            private void LimparComponentes()
-            {
+        private void LimparComponentes()
+        {
             txt_RA.Text = String.Empty;
-            ddlCursos.Text = String.Empty;
             txtDataIngressao.Text = String.Empty;
             txtNomeCompleto.Text = String.Empty;
             txtRG.Text = String.Empty;
@@ -112,32 +90,57 @@ namespace Desenvolvimento2
             txt_cidade.Text = String.Empty;
             txt_tipo_logradouro.Text = String.Empty;
             txtEnd.Text = String.Empty;
-            txt_tel_emergencia.Text = String.Empty;
+            txt_tel_emerg.Text = String.Empty;
             txtDTNascimento.Text = String.Empty;
             txtEmail.Text = String.Empty;
-            ddlSexo.Text = String.Empty;
-            ddlStatus.Text = String.Empty;
-            ddlTipo.Text = String.Empty;
             txt_dt_inclusao.Text = String.Empty;
             txt_dt_alteracao.Text = String.Empty;
-            }
-
-
-        //private void CarregarPaises()
-        //{
-        //    PaisDB paisDB = new PaisDB();
-        //    ddlPaises.DataSource = paisDB.ConsultarTudo();
-        //    ddlPaises.DataBind();
-        //}
-
-
-        
-        protected void ddlPaises_SelectedIndexChanged(object sender, EventArgs e)
-            {
-
-            }
-
-
-
         }
-    } 
+
+
+        private void CarregarPaises()
+        {
+            PaisDB paisDB = new PaisDB();
+            ddlPaises.DataSource = paisDB.ConsultarList();
+            ddlPaises.DataValueField = "Id";
+            ddlPaises.DataValueField = "Nome";
+            ddlPaises.DataBind();
+        }
+
+        private void CarregarCursos()
+        {
+            CursoDB cursoDB = new CursoDB();
+            ddlCursos.DataSource = cursoDB.ConsultarList();
+            ddlCursos.DataValueField = "Id";
+            ddlCursos.DataValueField = "Nome";
+            ddlCursos.DataBind();        
+        }
+
+        private void CarregarSexo()
+        {
+            SexoDB sexoDB = new SexoDB();
+            ddlSexo.DataSource = sexoDB.ConsultarList();
+            ddlSexo.DataValueField = "Id";
+            ddlSexo.DataValueField = "Nome";
+            ddlSexo.DataBind();
+        }
+
+        private void CarregarStatus()
+        {
+            StatusDB statusDB = new StatusDB();
+            ddlStatus.DataSource = statusDB.ConsultarList();
+            ddlStatus.DataValueField = "Id";
+            ddlStatus.DataValueField = "Nome";
+            ddlStatus.DataBind();
+        }
+
+        private void CarregarTipo()
+        {
+            TipoDB tipoDB = new TipoDB();
+            ddlTipo.DataSource = tipoDB.ConsultarList();
+            ddlTipo.DataValueField = "Id";
+            ddlTipo.DataValueField = "Nome";
+            ddlTipo.DataBind();
+        }
+    }
+  }

@@ -348,13 +348,13 @@ namespace Desenvolvimento2
         protected global::System.Web.UI.WebControls.Label lbl_Tel_Emergencia;
 
         /// <summary>
-        /// Controle txt_tel_emergencia.
+        /// Controle txt_tel_emerg.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tel_emergencia;
+        protected global::System.Web.UI.WebControls.TextBox txt_tel_emerg;
 
         /// <summary>
         /// Controle txtDTNascimento.

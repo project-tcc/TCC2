@@ -40,6 +40,8 @@
         <br />
         <form id="form2" runat="server" class="auto-style5">
             <div class="form-group">
+                ID<br />
+                <br />
                 <asp:Label ID="RA" runat="server" Text="RA"></asp:Label>
                 <asp:TextBox ID="txt_RA" runat="server" class="form-control" Width="209px"></asp:TextBox>
                 <br />
@@ -115,7 +117,7 @@
 
             <div class="form-group">
                 <asp:Label ID="lbl_Tel_Emergencia" runat="server" Text="Telefone (EMERGÊNCIA)"></asp:Label>
-                &nbsp;<asp:TextBox ID="txt_tel_emergencia" runat="server" class="form-control"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="txt_tel_emerg" runat="server" class="form-control"></asp:TextBox>
             </div>
 
             <div class="form-group">
@@ -163,8 +165,25 @@
                 </tr>
             </table>
             <br />
+
+
             <asp:Label ID="lbl_data_inclusao" runat="server" Text="Data Inclusão"></asp:Label>
-                <asp:TextBox ID="txt_dt_inclusao" runat="server" class="form-control"></asp:TextBox>
+            
+
+
+
+
+
+
+
+                <asp:TextBox ID="txt_dt_inclusao" runat="server" class="form-control" OnTextChanged="txt_dt_inclusao_TextChanged"></asp:TextBox>
+                    
+
+
+
+
+
+
             <br />
             <asp:Label ID="lbl_data_alteracao" runat="server" Text="Data de Alteração do Cadastro"></asp:Label>
                 <asp:TextBox ID="txt_dt_alteracao" runat="server" class="form-control"></asp:TextBox>

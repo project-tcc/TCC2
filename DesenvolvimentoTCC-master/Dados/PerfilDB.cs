@@ -22,24 +22,26 @@ namespace Dados
             try 
             {
                 string sql = "INSERT INTO perfil_tb " + "(id, usuario_id, tipo_id, tela_id, consultar, atualizar, deletar, imprimir, dt_inclusao, dt_alteracao)" +
-                    "values  (@Id, @usuario_id, @tipo_id, @tela_id, @consultar, @atualizar, @deletar, @imprimir, @dt_inclusao, @dt_alteracao)";
+                    "values  (@Id, @Usuario_id, @Tipo_id, @Tela_id, @Consultar, @Atualizar, @Deletar, @Imprimir, @Dt_inclusao, @Dt_alteracao)";
 
                 using (var cmd = sqliteConnection.CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue("@id", perfil.id);
-                    cmd.Parameters.AddWithValue("@usuario_id", perfil.usuario_id);
-                    cmd.Parameters.AddWithValue("@tipo_id", perfil.tipo_id);
-                    cmd.Parameters.AddWithValue("@tela_id", perfil.tela_id);
-                    cmd.Parameters.AddWithValue("@consultar", perfil.consultar);
-                    cmd.Parameters.AddWithValue("@atualizar", perfil.atualizar);
-                    cmd.Parameters.AddWithValue("@deletar", perfil.deletar);
-                    cmd.Parameters.AddWithValue("@imprimir", perfil.imprimir);
-                    cmd.Parameters.AddWithValue("@dt_inclusao", perfil.id);
-                    cmd.Parameters.AddWithValue("@dt_alteracao", perfil.data_alteracao);
+                    cmd.Parameters.AddWithValue("@Id", perfil.Id);
+                    cmd.Parameters.AddWithValue("@Usuario_id", perfil.Usuario_id);
+                    cmd.Parameters.AddWithValue("@Tipo_id", perfil.Tipo_id);
+                    cmd.Parameters.AddWithValue("@Tela_id", perfil.Tela_id);
+                    cmd.Parameters.AddWithValue("@Consultar", perfil.Consultar);
+                    cmd.Parameters.AddWithValue("@Atualizar", perfil.Atualizar);
+                    cmd.Parameters.AddWithValue("@Deletar", perfil.Deletar);
+                    cmd.Parameters.AddWithValue("@Imprimir", perfil.Imprimir);
+                    cmd.Parameters.AddWithValue("@Dt_inclusao", perfil.Id);
+                    cmd.Parameters.AddWithValue("@Dt_alteracao", perfil.Data_alteracao);
 
                     cmd.ExecuteNonQuery();
                    }
+                return true;
+
             }
             catch (Exception)
             {

@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Desenvolvimento2")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+//[assembly: AssemblyCulture("")]
 
 // Configurar o ComVisible como false torna os tipos desse assembly invisíveis 
 // para componentes COM.  Se for necessário acessar um tipo nesse assembly a partir do 

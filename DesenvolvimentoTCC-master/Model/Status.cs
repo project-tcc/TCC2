@@ -8,9 +8,16 @@ namespace Model
 {
     public class Status
     {
-        public int id { get; set; }
-        public string nome { get; set; }
-        public DateTime data_inclusao { get; set; }
-        public DateTime data_alteracao { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public DateTime Data_inclusao { get; set; }
+        public DateTime Data_alteracao { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
+
+
     }
 }

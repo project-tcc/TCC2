@@ -13,9 +13,12 @@ namespace Dados
         private static SQLiteConnection sqliteConnection;
         public static SQLiteConnection DbConnection()
         {
-            sqliteConnection = new SQLiteConnection(@"Data Source =  C:\repositorios\TCC\Desenvolvimento2\bin\banco_tcc.db");
+            sqliteConnection = new SQLiteConnection(@"Data Source =  C:\tmp\banco_tcc.db");
             sqliteConnection.Open();
             return sqliteConnection;
         }
+
+
+
     }
 }

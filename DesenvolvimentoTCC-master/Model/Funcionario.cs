@@ -8,32 +8,31 @@ namespace Model
 {
     public class Funcionario
     {
-        public int id { get; set; }
-        public string nome_completo { get; set; }
-        public int rg { get; set; }
-        public int cpf { get; set; }
-        public string telefone_fixo { get; set; }
-        public string telefone_celular { get; set; }
-        public string telefone_emergencial { get; set; }
-        public string end_cep { get; set; }
-        public string end_complemento { get; set; }
-        public string end_bairro { get; set; }
-        public string end_cidade { get; set; }
-        public string tipo_logradouro { get; set; }
-        public string end_rua { get; set; }
-        public int numresidencia { get; set; }
-        public DateTime data_cadastro { get; set; }
-        public DateTime data_nascimento { get; set; }
-        public int nacionalidade_id { get; set; }
-        public int status_id { get; set; }
-        public int sexo_id { get; set; }
-        public int tipo_id { get; set; }
-        public string dt_inclusao { get; set; }
-        public string data_alteracao { get; set; }
+        public int Id { get; set; }
+        public string Nome_completo { get; set; }
+        public string Rg { get; set; }
+        public string Cpf { get; set; }
+        public string Telefone_fixo { get; set; }
+        public string Telefone_celular { get; set; }
+        public string Telefone_emergencial { get; set; }
+        public string End_cep { get; set; }
+        public string End_complemento { get; set; }
+        public string End_bairro { get; set; }
+        public string End_cidade { get; set; }
+        public string Tipo_logradouro { get; set; }
+        public string End_rua { get; set; }
+        public string Numresidencia { get; set; }
+        public DateTime Data_nascimento { get; set; }
+        public string Nacionalidade_id { get; set; }
+        public int Status_id { get; set; }
+        public int Sexo_id { get; set; }
+        public int Tipo_id { get; set; }
+        public DateTime Dt_inclusao { get; set; }
+        public DateTime Dt_alteracao { get; set; }
 
-        public override string ToString()
-        {
-            return this.nome_completo;
-        }
+        //public override string ToString()
+        //{
+        //    return this.nome_completo;
+        //}
     }
 }

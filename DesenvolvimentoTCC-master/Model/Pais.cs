@@ -8,19 +8,21 @@ namespace Model
 {
     public class Pais
     {
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
 
-        public string nome { get; set; }
+        public DateTime Dt_inclusao { get; set; }
 
-        public DateTime dt_inclusao { get; set; }
-
-        public DateTime dt_alteracao { get; set; }
+        public DateTime Dt_alteracao { get; set; }
 
         public override string ToString()
         {
-            return this.nome;
+            return this.Nome;
         }
     }
+
+
+
 
 
 

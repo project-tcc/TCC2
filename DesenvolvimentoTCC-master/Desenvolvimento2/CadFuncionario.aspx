@@ -60,9 +60,7 @@
         <asp:TextBox ID="txt_telefone_emergencial" runat="server" class="form-control"></asp:TextBox>
         <asp:Label ID="lbl_Nacionalidade" runat="server" Text="Nacionalidade"></asp:Label>
         <br />
-        <asp:DropDownList ID="ddlPais" runat="server" OnSelectedIndexChanged="ddlPais_SelectedIndexChanged">
-        <asp:ListItem Text="Selecione" Value ="" />
-
+        <asp:DropDownList ID="ddlPaises" runat="server">
         </asp:DropDownList>
 
         <br />
@@ -86,11 +84,19 @@
                 <asp:Label ID="lbl_numero_casa" runat="server" Text="Número da Residência"></asp:Label>
                 <asp:TextBox ID="txtNumResidencia" runat="server" class="form-control"></asp:TextBox>  
         
-                <asp:Label ID="lbl_data_Cadastro" runat="server" Text="Data de Cadastro"></asp:Label>
-                <asp:TextBox ID="txtDTCadastro" runat="server" class="form-control"></asp:TextBox>  
-
                 <asp:Label ID="lbl_data_nascimento" runat="server" Text="Data de Nascimento"></asp:Label>
-                <asp:TextBox ID="txtdt_alteracao" runat="server" class="form-control"></asp:TextBox>  
+                <asp:TextBox ID="txtdt_nascimento" runat="server" class="form-control"></asp:TextBox>  
+
+                <asp:Label ID="lbl_data_Cadastro" runat="server" Text="Data de Cadastro"></asp:Label>
+                <asp:TextBox ID="txt_dt_inclusao" runat="server" class="form-control"></asp:TextBox>  
+
+        <br />
+
+                <asp:Label ID="lbl_data_de_alteracao" runat="server" Text="Data de Alteração"></asp:Label>
+                <br />
+                <asp:TextBox ID="txt_dt_alteracao" runat="server" class="form-control"></asp:TextBox>  
+
+        <br />
 
         <br />
         <table style="width:100%;">
